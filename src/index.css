@@ -13,3 +13,9 @@ body {
 .font-playfairDisplay{
   font-family: "Playfair Display", serif;
 }
+.menu a.active {
+  padding: 6px 20px;
+  color: rgb(35, 190, 10);
+  border: 1px solid rgb(35, 190, 10);
+  border-radius: .5rem;
+}

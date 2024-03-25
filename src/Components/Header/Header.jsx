@@ -3,7 +3,7 @@ import Navbar from "./Navbar.jsx";
 const Header = () => {
     return (
         <>
-          <Navbar/>
+            <Navbar/>
         </>
     );
 };
