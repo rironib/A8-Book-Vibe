@@ -6,12 +6,14 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import Book from "./Components/Main/Book.jsx";
 import BarChart from "./Components/BarChart/BarChart.jsx";
-// import Main from "./Components/Main/Main.jsx";
 import ErrorPage from "./Components/ErrorPage/ErrorPage.jsx";
 import Root from "./Components/Root.jsx";
 import Home from "./Components/Home.jsx";
+import BookLists from "./Components/BookLists/BookLists.jsx";
+import Login from "./Components/Login.jsx";
+import Signup from "./Components/Signup.jsx";
+import BookDetails from "./Components/Main/BookDetails.jsx";
 
 const router = createBrowserRouter([
     {
@@ -25,10 +27,13 @@ const router = createBrowserRouter([
                 element: <Home/>
             },
             {
+                path: '/booklist',
+                element: <BookLists/>
+            },
+            {
                 path: '/book/:bookId',
-                loader: ({params}) => fetch(`'/api.json/${params.bookId}`),
-                // loader: ({params}) => console.log(params.userId),
-                element: <Book/>
+                loader: () => fetch('/api.json'),
+                element: <BookDetails/>
             },
             {
                 path: '/chart',
@@ -37,7 +42,15 @@ const router = createBrowserRouter([
             {
                 path: '/books',
                 element: <App/>
-            }
+            },
+            {
+                path: '/login',
+                element: <Login/>
+            },
+           {
+                    path: '/signup',
+                    element: <Signup/>
+                }
         ]
     }
 ])
