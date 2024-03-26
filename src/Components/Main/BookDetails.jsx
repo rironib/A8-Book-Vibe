@@ -1,4 +1,7 @@
 import {useLoaderData, useParams} from "react-router-dom";
+import {saveToReadBook, saveToWishlist} from "../../Utility/localStorage.js";
+import {ToastContainer} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const BookDetails = () => {
     const books = useLoaderData();
@@ -6,9 +9,17 @@ const BookDetails = () => {
     const idInt = parseInt(bookId);
     const book = books.find(book => book.bookId === idInt);
     const {bookName,author,image,review,totalPages,rating,category,tags,publisher,yearOfPublishing} = book;
-    // console.log(book)
+
+    const handleAddToReadBook = () => {
+        saveToReadBook(idInt);
+    }
+
+    const handleAddToWishlist = () => {
+        saveToWishlist(idInt)
+    }
+
     return (
-        <div className='grid lg:grid-cols-2 gap-12'>
+        <div className='grid lg:grid-cols-2 gap-12 mb-12'>
             <div className='col-span-1 flex justify-center bg-[#1313130D] p-6 rounded-xl'>
                 <img src={image} className='max-h-[500px] rounded-xl'/>
             </div>
@@ -54,10 +65,14 @@ const BookDetails = () => {
                     </tbody>
                 </table>
                 <div className='flex gap-4 mt-2'>
-                    <button className='btn bg-white border-2'>Read</button>
-                    <button className='btn bg-[#50B1C9] text-white hover:text-black'>Wishlist</button>
+                    <button onClick={handleAddToReadBook} className='btn bg-white border-2'>Read</button>
+                    <button onClick={handleAddToWishlist} className='btn bg-[#50B1C9] text-white hover:text-black'>Wishlist</button>
                     </div>
                 </div>
+            <ToastContainer
+                autoClose={2000}
+                theme="colored"
+            />
         </div>
     );
 };

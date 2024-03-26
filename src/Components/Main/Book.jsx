@@ -1,12 +1,11 @@
-// import {Link} from "react-router-dom";
 import { FaRegStar } from "react-icons/fa";
-import {Link, useNavigate} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const Book = ({book}) => {
     const {bookId,bookName,image,author,category,rating,tags} = book;
     return (
         <Link to={`/book/${bookId}`}>
-            <div className='flex flex-col p-6 border rounded-2xl'>
+            <div className='h-full flex flex-col p-6 border rounded-2xl'>
                 <div className='flex justify-center bg-[#F3F3F3] mb-6 py-6 rounded-2xl'>
                     <img src={image} className='h-60'/>
                 </div>
