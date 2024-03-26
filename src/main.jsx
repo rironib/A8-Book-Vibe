@@ -4,7 +4,6 @@ import {
 } from "react-router-dom";
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
 import BarChart from "./Components/BarChart/BarChart.jsx";
 import ErrorPage from "./Components/ErrorPage/ErrorPage.jsx";
@@ -40,17 +39,13 @@ const router = createBrowserRouter([
                 element: <BarChart/>
             },
             {
-                path: '/books',
-                element: <App/>
-            },
-            {
                 path: '/login',
                 element: <Login/>
             },
-           {
-                    path: '/signup',
-                    element: <Signup/>
-                }
+            {
+                path: '/signup',
+                element: <Signup/>
+            }
         ]
     }
 ])
