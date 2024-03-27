@@ -39,8 +39,8 @@ const saveToWishlist = (id) => {
         toast.error('Already added to Read List!');
         return;
     } else if (!existInWishlist) {
-        storedReadBooks.push(id);
-        localStorage.setItem('wishlist', JSON.stringify(storedReadBooks));
+        storedWishlist.push(id);
+        localStorage.setItem('wishlist', JSON.stringify(storedWishlist));
         toast.success('Successfully added to Wishlist!');
         return;
     } else {

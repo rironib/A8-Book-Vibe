@@ -1,8 +1,26 @@
 import ListedBook from "./ListedBook.jsx";
 import {useLoaderData} from "react-router-dom";
+import {useEffect, useState} from "react";
+import {getReadBookList, getWishlistBooks} from "../../Utility/localStorage.js";
 
 const BookLists = () => {
     const books = useLoaderData();
+
+    const [dispalyReadLists, setDisplayReadLists] = useState([]);
+    const [displayWishlists, setDisplayWishlist] = useState([])
+
+    useEffect(() => {
+        const storedReadBookList = getReadBookList();
+        const storedWishlists = getWishlistBooks();
+        if(books.length > 0){
+            const bookReaded = books.filter(book => storedReadBookList.includes(book.bookId));
+            const bookWishlist = books.filter(book => storedWishlists.includes(book.bookId));
+            setDisplayReadLists(bookReaded);
+            setDisplayWishlist(bookWishlist);
+        }
+    }, [books]);
+
+    console.log(dispalyReadLists)
 
     const handleChange = (event) => {
         setValue(event.target.value);
@@ -25,13 +43,13 @@ const BookLists = () => {
                 <input onChange={handleChange} type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="Read Books" checked/>
                 <div role="tabpanel" className="tab-content border-t-base-300 py-6">
                     {
-                        books.map((book) => <ListedBook key={book.bookId} book={book}/>)
+                        dispalyReadLists.map((book) => <ListedBook key={book.bookId} book={book}/>)
                     }
                 </div>
                 <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="Wishlist Books"/>
                 <div role="tabpanel" className="tab-content border-t-base-300 py-6">
                     {
-                        books.map((book) => <ListedBook key={book.bookId} book={book}/>)
+                        displayWishlists.map((book) => <ListedBook key={book.bookId} book={book}/>)
                     }
                 </div>
             </div>
