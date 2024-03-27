@@ -10,4 +10,5 @@ Book Vibe is a comprehensive platform designed to elevate your reading experienc
 - **Track your reading progress:** Set goals, monitor your reading habits, and create a personalized library of books you've read or want to read.
 - **Continuously evolving:** New features and content are constantly added, ensuring a dynamic and enriching experience for every book lover.
 
-**Live Website:** [Book Vibe](https://b9a8-book-vibe-rironib.vercel.app/)
+**Live Website:** [Book Vibe - Vercel](https://b9a8-book-vibe-rironib.vercel.app/)
+**Alternative Live Website:** [Book Vibe - Netlify](https://book-vibe-5dd491.netlify.app/)

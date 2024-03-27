@@ -1,7 +1,7 @@
 [
   {
     "bookId": 1,
-    "bookName": "The Lord of the Rings: The Fellowship of the Ring",
+    "bookName": "The Lord.",
     "author": "J. R. R. Tolkien",
     "image": "https://i.ibb.co/51hY2yL/61215351.jpg",
     "review": "An epic tale of adventure and fellowship in a world threatened by darkness.",
@@ -14,7 +14,7 @@
   },
   {
     "bookId": 2,
-    "bookName": "Pride and Prejudice",
+    "bookName": "Pride and P.",
     "author": "Jane Austen",
     "image": "https://i.ibb.co/KxjVSrL/1885.jpg",
     "review": "A witty and timeless social commentary on love and class in 19th century England.",
@@ -27,7 +27,7 @@
   },
   {
     "bookId": 3,
-    "bookName": "To Kill a Mockingbird",
+    "bookName": "To Kill M",
     "author": "Harper Lee",
     "image": "https://i.ibb.co/ySNFvXC/2657.jpg",
     "review": "A powerful coming-of-age story that explores themes of racial injustice and prejudice.",
@@ -40,7 +40,7 @@
   },
   {
     "bookId": 4,
-    "bookName": "The Hitchhiker's Guide to the Galaxy",
+    "bookName": "The Hitch.",
     "author": "Douglas Adams",
     "image": "https://i.ibb.co/hFnZdrk/13.jpg",
     "review": "A hilarious and absurdist science fiction comedy about a man and his towel on a journey through space.",
@@ -66,7 +66,7 @@
   },
   {
     "bookId": 6,
-    "bookName": "One Hundred Years of Solitude",
+    "bookName": "One Hundred.",
     "author": "Gabriel García Márquez",
     "image": "https://i.ibb.co/7C09VHT/320.jpg",
     "review": "A magical realist masterpiece that explores the history and rise and fall of a fictional town.",

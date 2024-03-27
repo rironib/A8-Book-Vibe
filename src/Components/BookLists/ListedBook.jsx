@@ -39,7 +39,7 @@ const ListedBook = ({book}) => {
                     </p>
                     <p className='flex gap-2 items-center text-[#131313CC]'><GrLocation /> Year of Publishing: {yearOfPublishing}</p>
                 </div>
-                <div className='flex gap-5 border-b pb-3 mb-3'>
+                <div className='flex flex-wrap gap-5 border-b pb-3 mb-3'>
                     <p className='flex gap-2 items-center'><FiUsers /> Publisher: {publisher}</p>
                     <p className='flex gap-2 items-center'><LuFileBarChart /> Page {totalPages}</p>
                 </div>

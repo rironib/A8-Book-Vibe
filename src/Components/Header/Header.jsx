@@ -16,7 +16,7 @@ const Header = () => {
                         className="menu menu-sm dropdown-content mt-3 z-[1] px-4 p-2 shadow bg-base-100 rounded-box w-52 space-y-2">
                         <NavLink to='/'>Home</NavLink>
                         <NavLink to='/booklist'>Listed Books</NavLink>
-                        <NavLink to='/chart'>Pages to Read</NavLink>
+                        <NavLink to='/statistics'>Pages to Read</NavLink>
                     </ul>
                 </div>
                 <Link to='/' className="btn btn-ghost text-2xl lg:text-3xl font-bold px-0">Book Vibe</Link>
@@ -25,7 +25,7 @@ const Header = () => {
                 <ul className="menu menu-horizontal px-1 text-lg font-semibold flex gap-4 items-center">
                     <NavLink to='/'>Home</NavLink>
                     <NavLink to='/booklist'>Listed Books</NavLink>
-                    <NavLink to='/chart'>Pages to Read</NavLink>
+                    <NavLink to='/statistics'>Pages to Read</NavLink>
                 </ul>
             </div>
             <div className="navbar-end flex gap-2 lg:gap-4">
