@@ -21,21 +21,19 @@ const ListedBook = ({book}) => {
     }
 
     return (
-        <div className='flex flex-col lg:flex-row gap-6 p-6 mb-4 border rounded-xl'>
-            <div className='bg-[#1313130D] p-4 rounded-xl'>
-                <img src={image} className='max-h-[200px] mx-auto' />
+        <div className='flex flex-col md:flex-row gap-6 p-6 mb-4 border rounded-xl'>
+            <div className='flex items-center bg-[#1313130D] p-4 rounded-xl'>
+                <img src={image} className='max-h-[340px] md:max-h-[280px] lg:max-h-[240px] xl:max-h-[220px] mx-auto rounded-xl' />
             </div>
             <div className='w-full'>
                 <h2 className='font-bold text-xl mb-3'>{bookName}</h2>
                 <h5 className='font-medium mb-5'>By : {author}</h5>
                 <div className='flex flex-wrap gap-4 mb-4'>
-                    <p>
+                    <p className='flex flex-wrap gap-4'>
                         <strong>Tag</strong>
-                        <span className='space-x-2'>
                             {
                                 tags.map((tag, idx) => <span className='bg-[#23BE0A0D] text-[#23BE0A] px-4 py-1 rounded-full' key={idx}>#{tag}</span>)
                             }
-                        </span>
                     </p>
                     <p className='flex gap-2 items-center text-[#131313CC]'><GrLocation /> Year of Publishing: {yearOfPublishing}</p>
                 </div>

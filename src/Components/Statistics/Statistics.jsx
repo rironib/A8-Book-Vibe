@@ -16,7 +16,20 @@ const Statistics = () => {
         }
     }, [books]);
 
-const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#FF00FF', '#800080', '#FFFF00'];
+    const colors = [
+        "#000000", // Black
+        "#FF5733", // Reddish Orange
+        "#FFBD33", // Gold
+        "#FFDD33", // Yellow
+        "#33FF57", // Greenish Yellow
+        "#33FFBD", // Turquoise
+        "#33DDFF", // Sky Blue
+        "#3366FF", // Royal Blue
+        "#5733FF", // Violet
+        "#BD33FF", // Purple
+        "#FF33BD", // Magenta
+        "#FF3366"  // Pink
+    ];
 
 const getPath = (x, y, width, height) => {
     return `M${x},${y + height}C${x + width / 3},${y + height} ${x + width / 2},${y + height / 3}

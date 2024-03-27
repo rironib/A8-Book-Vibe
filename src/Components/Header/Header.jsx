@@ -13,7 +13,7 @@ const Header = () => {
                         </svg>
                     </div>
                     <ul tabIndex="0"
-                        className="menu menu-sm dropdown-content mt-3 z-[1] px-4 p-2 shadow bg-base-100 rounded-box w-52 space-y-2">
+                        className="menu menu-sm dropdown-content mt-3 z-[1] p-6 shadow-lg font-medium bg-base-100 rounded-box w-52 space-y-3">
                         <NavLink to='/'>Home</NavLink>
                         <NavLink to='/booklist'>Listed Books</NavLink>
                         <NavLink to='/statistics'>Pages to Read</NavLink>
