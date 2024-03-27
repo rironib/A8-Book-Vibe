@@ -26,7 +26,7 @@ const ListedBook = ({book}) => {
                 <img src={image} className='max-h-[340px] md:max-h-[280px] lg:max-h-[240px] xl:max-h-[220px] mx-auto rounded-xl' />
             </div>
             <div className='w-full'>
-                <h2 className='font-bold text-xl mb-3'>{bookName}</h2>
+                <h2 className='font-bold text-2xl lg:text-3xl mb-3'>{bookName}</h2>
                 <h5 className='font-medium mb-5'>By : {author}</h5>
                 <div className='flex flex-wrap gap-4 mb-4'>
                     <p className='flex flex-wrap gap-4'>

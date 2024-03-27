@@ -1,7 +1,7 @@
 
 const Signup = () => {
     return (
-        <div className='min-h-[75vh] w-full p-6 flex flex-col justify-center items-center border-2 rounded-xl'>
+        <div className='min-h-[50vh] w-full p-6 flex flex-col justify-center items-center rounded-xl'>
             <h2 className='mb-6 text-4xl font-bold'>Sign Up</h2>
             <div className='flex flex-col gap-6'>
                 <label className="input input-bordered flex items-center gap-2">
