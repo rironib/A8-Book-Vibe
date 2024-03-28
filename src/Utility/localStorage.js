@@ -14,10 +14,10 @@ const saveToReadBook = (id) => {
     if(!exists){
         storedReadBooks.push(id);
         localStorage.setItem('read-list', JSON.stringify(storedReadBooks));
-        toast.success('Successfully added to Read List!');
+        toast.success('Successfully Added to Read!');
         return;
     } else {
-        toast.error('Already added to Read List!');
+        toast.error('Already Added to Read!');
         return;
     }
 }
@@ -36,15 +36,15 @@ const saveToWishlist = (id) => {
     const storedWishlist = getWishlistBooks();
     const existInWishlist = storedWishlist.find(bookId => bookId === id);
     if(existInRead){
-        toast.error('Already added to Read List!');
+        toast.error('Already Added to Read!');
         return;
     } else if (!existInWishlist) {
         storedWishlist.push(id);
         localStorage.setItem('wishlist', JSON.stringify(storedWishlist));
-        toast.success('Successfully added to Wishlist!');
+        toast.success('Successfully Added to Wishlist!');
         return;
     } else {
-        toast.error('Already added to Wishlist!');
+        toast.error('Already Added to Wishlist!');
         return;
     }
 }

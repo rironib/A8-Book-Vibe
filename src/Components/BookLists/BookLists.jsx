@@ -37,6 +37,20 @@ const BookLists = () => {
         setSortBy(event.target.value);
     };
 
+    function renderBooks(books) {
+        if (!books || books.length === 0) {
+            return <div role="alert" className="alert alert-error text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none"
+                     viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                          d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span>Error! No books to display.</span>
+            </div>;
+        }
+        return books.map((book) => <ListedBook key={book.bookId} book={book}/>);
+    }
+
     return (
         <>
             <Helmet>
@@ -62,18 +76,14 @@ const BookLists = () => {
                        aria-label="Read Books" value='read' checked readOnly/>
                 <div role="tabpanel" className="tab-content border-t-base-300 py-6">
                     {
-                        displayedBooks.read && displayedBooks.read.map(
-                            (book) => <ListedBook key={book.bookId} book={book}/>
-                        )
+                        renderBooks(displayedBooks.read)
                     }
                 </div>
                 <input type="radio" name="my_tabs_2" role="tab" className="tab text-lg h-16 xl:h-10"
                        aria-label="Wishlist Books"/>
                 <div role="tabpanel" className="tab-content border-t-base-300 py-6">
                     {
-                        displayedBooks.wishlist && displayedBooks.wishlist.map(
-                            (book) => <ListedBook key={book.bookId} book={book}/>
-                        )
+                        renderBooks(displayedBooks.wishlist)
                     }
                 </div>
             </div>
