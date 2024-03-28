@@ -29,7 +29,7 @@ const BookDetails = () => {
                     <img src={image} className='max-h-[500px] rounded-xl'/>
                 </div>
                 <div className='col-span-1 flex flex-col'>
-                    <h2 className='font-bold text-3xl mb-5'>{bookName}</h2>
+                    <h2 className='font-playfairDisplay font-bold text-3xl mb-5'>{bookName}</h2>
                     <h5 className='text-[#131313CC] text-lg font-medium mb-4'>By : {author}</h5>
                     <h5 className='text-[#131313CC] text-lg font-medium py-2 border-y'>{category}</h5>
                     <p className='flex-grow text-[#131313B3] py-3'>

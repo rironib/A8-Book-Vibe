@@ -1,5 +1,5 @@
-import Banner from "./Main/Banner.jsx";
-import Books from "./Main/Books.jsx";
+import Banner from "./Banner.jsx";
+import Books from "./Books.jsx";
 import {Helmet} from "react-helmet-async";
 
 const Home = () => {

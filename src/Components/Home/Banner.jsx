@@ -8,7 +8,7 @@ const Banner = () => {
                     <img src="/banner.png"
                          className="w-full max-w-[450px] md:max-w-[320px] rounded-lg"/>
                     <div className='text-center md:text-left'>
-                        <h1 className="lg:w-2/3 text-4xl md:text-5xl lg:text-6xl leading-tight md:leading-normal xl:leading-relaxed font-bold mb-8 md:mb-12">
+                        <h1 className="lg:w-2/3 text-3xl md:text-4xl lg:text-5xl leading-tight md:leading-normal xl:leading-relaxed font-playfairDisplay font-bold mb-8 md:mb-12">
                             Books to freshen up your bookshelf
                         </h1>
                         <Link to='/booklist'  className="btn bg-[#23BE0A] text-white text-lg">View The List</Link>

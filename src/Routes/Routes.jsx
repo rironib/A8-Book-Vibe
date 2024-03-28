@@ -1,12 +1,12 @@
 import {createBrowserRouter} from "react-router-dom";
-import Root from "../Components/Root.jsx";
+import Root from "../Components/Root/Root.jsx";
 import ErrorPage from "../Components/ErrorPage/ErrorPage.jsx";
-import Home from "../Components/Home.jsx";
+import Home from "../Components/Home/Home.jsx";
 import BookLists from "../Components/BookLists/BookLists.jsx";
-import BookDetails from "../Components/Main/BookDetails.jsx";
+import BookDetails from "../Components/Home/BookDetails.jsx";
 import Statistics from "../Components/Statistics/Statistics.jsx";
-import Login from "../Components/Login.jsx";
-import Signup from "../Components/Signup.jsx";
+import Login from "../Components/Login/Login.jsx";
+import Signup from "../Components/Signup/Signup.jsx";
 
 const router = createBrowserRouter([
     {

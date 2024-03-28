@@ -14,7 +14,7 @@ const Book = ({book}) => {
                         tags.map((tag, idx) => <span key={idx}>{tag}</span>)
                     }
                 </div>
-                <div className='flex-grow font-bold text-2xl mb-4'>{bookName}</div>
+                <div className='flex-grow font-playfairDisplay font-bold text-2xl mb-4'>{bookName}</div>
                 <div className='text-[#131313CC] font-medium mb-4 pb-4 border-b border-dashed'>By : {author}</div>
                 <div className='flex justify-between font-medium text-[#131313CC]'>
                     <div>{category}</div>

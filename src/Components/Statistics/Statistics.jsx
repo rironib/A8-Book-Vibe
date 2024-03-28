@@ -1,7 +1,7 @@
 import {useLoaderData} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {getReadBookList} from "../../Utility/localStorage.js";
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import {Helmet} from "react-helmet-async";
 
 const Statistics = () => {
@@ -50,7 +50,7 @@ const TriangleBar = (props) => {
             <Helmet>
                 <title>Pages to Read | Book Vibe</title>
             </Helmet>
-            <div style={{width: '100%', height: 300}}>
+            <div className='font-inter' style={{width: '100%', height: 300}}>
                 <ResponsiveContainer>
                     <BarChart
                         width={500}
@@ -66,6 +66,7 @@ const TriangleBar = (props) => {
                         <CartesianGrid strokeDasharray="3 3"/>
                         <XAxis dataKey="bookName"/>
                         <YAxis/>
+                        <Tooltip />
                         <Bar dataKey="totalPages" fill="#8884d8" shape={<TriangleBar/>} label={{position: 'top'}}>
                             {data.map((entry, index) => (
                                 <Cell key={`cell-${index}`} fill={colors[index % 20]}/>
