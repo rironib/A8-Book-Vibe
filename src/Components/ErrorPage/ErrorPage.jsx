@@ -1,6 +1,7 @@
 import {useNavigate, useRouteError} from "react-router-dom";
 import Header from "../Header/Header.jsx";
 import Footer from "../Footer/Footer.jsx";
+import {Helmet} from "react-helmet-async";
 
 const ErrorPage = () => {
     const error = useRouteError();
@@ -10,6 +11,9 @@ const ErrorPage = () => {
     }
     return (
         <>
+            <Helmet>
+                <title>Error | Book Vibe</title>
+            </Helmet>
             <Header/>
             <div className='w-11/12 max-w-[1280px] mx-auto'>
                 <div className='min-h-[50vh] w-full p-6 flex flex-col justify-center items-center rounded-xl'>

@@ -2,6 +2,7 @@ import {useLoaderData} from "react-router-dom";
 import ListedBook from "./ListedBook.jsx";
 import { useEffect, useState } from "react";
 import { getReadBookList, getWishlistBooks } from "../../Utility/localStorage.js";
+import {Helmet} from "react-helmet-async";
 
 const BookLists = () => {
     const books = useLoaderData();
@@ -37,7 +38,10 @@ const BookLists = () => {
     };
 
     return (
-        <div>
+        <>
+            <Helmet>
+                <title>Listed Books | Book Vibe</title>
+            </Helmet>
             <div className='bg-[#1313130D] p-8 font-bold text-3xl text-center mb-8 rounded-2xl'>Books</div>
 
             <div className='text-center mb-6'>
@@ -73,7 +77,7 @@ const BookLists = () => {
                     }
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 

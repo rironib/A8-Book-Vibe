@@ -1,7 +1,11 @@
-import Header from "./Header/Header.jsx";
+import {Helmet} from "react-helmet-async";
 
 const Login = () => {
     return (
+        <>
+            <Helmet>
+                <title>Login | Book Vibe</title>
+            </Helmet>
             <div className='min-h-[50vh] w-full p-6 flex flex-col justify-center items-center rounded-xl'>
                 <h2 className='mb-6 text-4xl font-bold'>Login</h2>
                 <div className='flex flex-col gap-6'>
@@ -25,6 +29,7 @@ const Login = () => {
                     <button className="btn btn-wide btn-active">Login</button>
                 </div>
             </div>
+        </>
     );
 };
 
